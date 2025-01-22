@@ -1,3 +1,5 @@
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +10,7 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -29,15 +31,123 @@ nav ul li a {
 
 section {
     padding: 20px;
+    max-width: 800px; /* Limit the width of sections */
+    margin: 0 auto; /* Center the sections */
 }
 
 #post-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow posts to wrap to the next line */
+    justify-content: space-between; /* Space out posts */
     margin-top: 20px;
 }
 
+.post {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: calc(30% - 20px); /* Three posts per row with spacing */
+    transition: background 0.3s ease;
+}
+/* Contact Section Styles */
+#contact {
+    background: #f9f9f9; /* Light background for contrast */
+    padding: 40px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space from the previous section */
+}
+
+#contact h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker text color */
+}
+
+#contact p {
+    text-align: center; /* Center the description */
+    margin-bottom: 20px; /* Space below the paragraph */
+    color: #666; /* Slightly lighter text */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border around inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for a better look */
+    box-sizing: border-box; /* Include padding and border in total width/height */
+}
+
+#contact-form textarea {
+    height: 100px; /* Set height for textarea */
+}
+
+#contact-form button {
+    background: #333; /* Dark background for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Padding inside button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease; /* Smooth transition for background */
+    width: 100%; /* Full width button */
+}
+
+#contact-form button:hover {
+    background: #555; /* Darker background on hover */
+}
+
+/* Responsive Styles for Contact Form */
+@media (max-width: 600px) {
+    #contact {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+}
 footer {
     text-align: center;
     padding: 10px 0;
     background: #333;
     color: #fff;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #post-container {
+        flex-direction: column; /* Stack posts on smaller screens */
+        align-items: center; /* Center posts */
+    }
+
+    .post {
+        width: 90%; /* Make posts full width on small screens */
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items on small screens */
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+.about-container {
+    width: 80%;
+    max-width: 900px;
+    text-align: justify;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+  }
